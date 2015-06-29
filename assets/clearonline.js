@@ -108,6 +108,18 @@ define('clearonline/templates/application', ['exports'], function (exports) {
         var el2 = dom.createTextNode("Welcome to Ember.js");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","stage");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("figure");
+        dom.setAttribute(el2,"class","ball");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createComment("");
@@ -136,7 +148,7 @@ define('clearonline/templates/application', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(fragment,2,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,4,4,contextualElement);
         content(env, morph0, context, "outlet");
         return fragment;
       }
